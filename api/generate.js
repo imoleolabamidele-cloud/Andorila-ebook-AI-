@@ -768,7 +768,16 @@ async function generateEbook(body) {
 
     const rawBook = extractJSON(aiResponse);
 
-    const book = validateBook(rawBook);
+console.error("INDORILA CHAPTER DIAGNOSTIC:", {
+    keys: Object.keys(rawBook || {}),
+    chaptersType: typeof rawBook?.chapters,
+    isArray: Array.isArray(rawBook?.chapters),
+    chapterCount: Array.isArray(rawBook?.chapters)
+        ? rawBook.chapters.length
+        : null
+});
+
+const book = validateBook(rawBook);
 
     let cover;
 
