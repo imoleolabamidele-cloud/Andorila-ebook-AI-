@@ -306,7 +306,7 @@ async function generateText(prompt) {
                 "Content-Type": "application/json",
 
                 "Pollinations-Safe":
-                    "privacy,secrets,sexual,violence,shield"
+                    "privacy,secrets,sexual,violence"
 
             },
 
